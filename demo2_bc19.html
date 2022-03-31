@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FastSpeech 2 Audio Samples</title>
+  <style>
+    body {
+      margin: 0% 1%;
+      padding: 50px 30px;
+      background: #fff;
+      color: #111;
+      font-size: 17px;
+      font-family: sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 {
+      font-size: 1.75em;
+    }
+
+    h2 {
+      margin-bottom: 0.4em;
+    }
+
+    hr {
+      height: 0.5px;
+      border-width: 0;
+      color: lightgray;
+      background-color: lightgray
+    }
+
+    table {
+      width: 100%;
+    }
+
+    audio {
+      width: 220px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Integrating Discrete Word-Level Style Variations into Non-autoregressive Acoustic Models for Speech Synthesis</h1>
+  <p>
+
+  <div><b>Authors</b>: <em>Zhao-Ci Liu, Ning-Qian Wu, Ya-Jie Zhang, Zhen-Hua Ling</em>
+    </em></div>
+  
+  <div><b>Abstract</b>: <em></em>This paper presents a method of integrating word-level style variations (WSVs) into non-autoregressive acoustic models for speech synthesis. WSVs are discrete latent representations extracted from the acoustic features of words, which have been proposed in our previous work to improve the naturalness of the Tacotron2 model. In this paper, we integrate WSVs into FastSpeech2, a  non-autoregressive acoustic model. In the WSV extractor, a Gumbel-Sigmoid activation function is introduced for WSV representation and is compared with the original Gumbel-Softmax activation by experiments. The WSV predictor utilizes the word embeddings provided by BERT and has a non-autoregressive structure to be compatible with FastSpeech2. Experimental results show that our proposed method with the Gumbel-Sigmoid activation  achieved better objective performance on F0 prediction than the FastSpeech2 baseline and the method using the Gumbel-Softmax activation. The subjective performance of our proposed models was also significantly better than the FastSpeech2 baseline.
+    </em></div>
+  <div>
+    <b>Dataset</b>: <a href="https://www.synsig.org/index.php/Blizzard_Challenge_2019#Data_download">Blizzard Challenge 2019 Dataset</a>
+  </div>
+
+  <hr>
+
+  <table>
+    <tr>
+      <th style="text-align: center">Ground-Truth</th>
+      <th style="text-align: center">Tacotron2</th>
+      <th style="text-align: center">Tacotron2 Cat</th>
+      <th style="text-align: center">FastSpeech2</th>
+      <th style="text-align: center">FS2WSV Cat</th>
+      <th style="text-align: center">FS2WSV Ber</th>
+    </tr>
+    <tr>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/GT/A_16.wav" autoplay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2/A_16.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2WSV_Cat/A_16.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2/B_16.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Cat/D_16.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Ber/C_16.wav" autopl ay />
+        </audio></td>
+    </tr>
+  </table>
+  <div><b>Text</b>: <em>哎，我心里那个瞬间啊对他的敬意是要打一点折扣的啊。</em></div>
+
+  <hr>
+
+  <table>
+    <tr>
+      <th style="text-align: center">Ground-Truth</th>
+      <th style="text-align: center">Tacotron2</th>
+      <th style="text-align: center">Tacotron2 Cat</th>
+      <th style="text-align: center">FastSpeech2</th>
+      <th style="text-align: center">FS2WSV Cat</th>
+      <th style="text-align: center">FS2WSV Ber</th>
+    </tr>
+    <tr>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/GT/A_17.wav" autoplay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2/A_17.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2WSV_Cat/A_17.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2/B_17.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Cat/D_17.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Ber/C_17.wav" autopl ay />
+        </audio></td>
+    </tr>
+  </table>
+  <div><b>Text</b>: <em>不是嫌月饼便宜呀，而是你浓眉大眼的居然一点创意也没有。</em></div>
+
+  <hr>
+
+
+  <table>
+    <tr>
+      <th style="text-align: center">Ground-Truth</th>
+      <th style="text-align: center">Tacotron2</th>
+      <th style="text-align: center">Tacotron2 Cat</th>
+      <th style="text-align: center">FastSpeech2</th>
+      <th style="text-align: center">FS2WSV Cat</th>
+      <th style="text-align: center">FS2WSV Ber</th>
+    </tr>
+    <tr>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/GT/A_0.wav" autoplay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2/A_0.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2WSV_Cat/A_00.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2/B_0.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Cat/D_0.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Ber/C_0.wav" autopl ay />
+        </audio></td>
+    </tr>
+  </table>
+  <div><b>Text</b>: <em>经常有人问啊什么时候我该守规矩什么时候我可以破坏规矩呢，</em></div>
+
+  <hr>
+
+  <table>
+    <tr>
+      <th style="text-align: center">Ground-Truth</th>
+      <th style="text-align: center">Tacotron2</th>
+      <th style="text-align: center">Tacotron2 Cat</th>
+      <th style="text-align: center">FastSpeech2</th>
+      <th style="text-align: center">FS2WSV Cat</th>
+      <th style="text-align: center">FS2WSV Ber</th>
+    </tr>
+    <tr>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/GT/A_1.wav" autoplay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2/A_1.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2WSV_Cat/A_01.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2/B_1.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Cat/D_1.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Ber/C_1.wav" autopl ay />
+        </audio></td>
+    </tr>
+  </table>
+  <div><b>Text</b>: <em>哎要回答这个问题就得知道，我们的那些规矩到底是干什么用的。</em></div>
+
+  <hr>
+
+  <table>
+    <tr>
+      <th style="text-align: center">Ground-Truth</th>
+      <th style="text-align: center">Tacotron2</th>
+      <th style="text-align: center">Tacotron2 Cat</th>
+      <th style="text-align: center">FastSpeech2</th>
+      <th style="text-align: center">FS2WSV Cat</th>
+      <th style="text-align: center">FS2WSV Ber</th>
+    </tr>
+    <tr>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/GT/A_2.wav" autoplay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2/A_2.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2WSV_Cat/A_02.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2/B_2.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Cat/D_2.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Ber/C_2.wav" autopl ay />
+        </audio></td>
+    </tr>
+  </table>
+  <div><b>Text</b>: <em>规矩的作用啊本质上是降低人和人之间连接的成本的。</em></div>
+
+  <hr>
+
+
+  <table>
+    <tr>
+      <th style="text-align: center">Ground-Truth</th>
+      <th style="text-align: center">Tacotron2</th>
+      <th style="text-align: center">Tacotron2 Cat</th>
+      <th style="text-align: center">FastSpeech2</th>
+      <th style="text-align: center">FS2WSV Cat</th>
+      <th style="text-align: center">FS2WSV Ber</th>
+    </tr>
+    <tr>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/GT/A_4.wav" autoplay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2/A_4.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/Tacotron2WSV_Cat/A_04.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2/B_4.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Cat/D_4.wav" autopl ay />
+        </audio></td>
+      <td style="text-align: center"><audio controls="controls">
+          <source src="./demo2_bc19/FS2WSV_Ber/C_4.wav" autopl ay />
+        </audio></td>
+    </tr>
+  </table>
+  <div><b>Text</b>: <em>啊比如在家里，两口子之间立的那些规矩，他就不容易长期保持，所谓清官难断家务事也就是这个原因。</em></div>
+
+  <hr>
+
+ 
+
+
+  </p>
+
+  <hr>
+
+
+</body>
+
+</html>
